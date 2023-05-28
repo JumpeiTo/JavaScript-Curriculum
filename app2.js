@@ -1,10 +1,8 @@
 $(function(){
-    $('.box1').slideDown(function (){
-    $('.box1').css({
-        'height': '100px',
-        'width': '200px',
-        'background-color': 'blue'
+    $('.box1').on('click', function(){
+        $('.box1').addClass('box1-ext');
     });
-    $('.box1').slideUp(2000);
+    $('.box1').mouseout(function(){
+        $('.box1').removeClass('box1-ext');
     });
 });
